@@ -1,19 +1,19 @@
 # 50 — DevEx & Tooling
 
-## Stack (Rails 8 / Jumpstart Pro)
+## Stack (customize per project)
 - Language: **Ruby 3.3+**
-- Framework: **Rails 8**
+- Framework: **Rails 8** (Jumpstart Pro)
 - Package manager: Bundler
-- Formatter/Linter: **RuboCop**
+- Formatter/Linter: **StandardRB** (or RuboCop)
 - Database: PostgreSQL
-- JavaScript: Import Maps (no Node.js needed)
-- CSS: TailwindCSS v4
+- JavaScript: Import Maps or esbuild
+- CSS: Tailwind CSS v4
 - Testing: Minitest
 
 ## Commands
 - `make setup` — install deps & setup database (`bin/setup`)
-- `make lint` — RuboCop linting (`bin/rubocop`)
-- `make lint:fix` — auto-fix lint issues (`bin/rubocop -a`)
+- `make lint` — linting (`bundle exec standardrb` or `bin/rubocop`)
+- `make lint:fix` — auto-fix lint issues (`bundle exec standardrb --fix` or `bin/rubocop -a`)
 - `make check` — lint only (no type checking in Ruby)
 - `make test` — runs unit, integration, system tests
 - `make test:unit` — models, helpers, mailers
